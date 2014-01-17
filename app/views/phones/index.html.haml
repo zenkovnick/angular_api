@@ -1,0 +1,15 @@
+.container-fluid
+  .row-fluid
+    Search:
+    %input{'ng-model'=>"query"}
+    Sort by:
+    %select{'ng-model' => "orderProp"}
+      %option{value:"name"}
+        Alphabetical
+      %option{value:"age"}
+        Newest
+    %ul.phones
+      %li{'ng-repeat'=>"phone in phones | filter:query | orderBy:orderProp"}
+        {{phone.name}}
+        %p
+          {{phone.snippet}}
