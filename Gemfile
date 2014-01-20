@@ -11,7 +11,9 @@ gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'haml-rails'
 
 
-gem 'sqlite3'
+gem 'mongoid', github: 'mongoid/mongoid'
+gem 'bson'
+gem 'bson_ext'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
