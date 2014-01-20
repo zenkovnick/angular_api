@@ -1,6 +1,6 @@
 Angular::Application.routes.draw do
-  get 'list' => 'phones#list'
-  get 'details' => 'phones#details'
+  get 'phones/:model' => 'phones#details'
+  get 'phones' => 'phones#list'
   root 'phones#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,10 +5,10 @@ class PhonesController < ApplicationController
     render "index"
   end
   def list
-    render json: File.read("lib/phones/phones.json"), :callback => params[:callback]
+    render json: File.read("lib/phones/phones.json")#, :callback => params[:callback]
   end
 
   def details
-    render json: File.read("lib/phones/#{params[:model]}.json"), :callback => params[:callback]
+    render json: File.read("lib/phones/#{params[:model]}.json")#, :callback => params[:callback]
   end
 end
